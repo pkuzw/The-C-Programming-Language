@@ -26,13 +26,15 @@ int main() {
 
 int getline(char s[], int lim) {
 	int c, i;
-	for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; i++)
-		s[i] = c;
+	int j = 0;
+	for (i = 0; (c = getchar()) != EOF && c != '\n'; i++) {
+		if (i < lim - 2)	s[j++] = c;
+	}
 	if (c == '\n') {
-		s[i] = c;
+		s[j++] = c;
 		i++;
 	}
-	s[i] = '\0';
+	s[j] = '\0';
 	return i;
 }
 
