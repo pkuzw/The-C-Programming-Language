@@ -1,3 +1,6 @@
+///@file	Practice 1.10
+///@author	zhaowei
+///@date	2015.11.07
 #include <stdio.h>
 #include <conio.h>
 
